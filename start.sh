@@ -13,9 +13,9 @@ if ! pgrep -x "mongod" > /dev/null; then
 fi
 
 # Start backend
-echo "🔧 Starting Backend Server (Port 5001)..."
+echo "🔧 Starting Backend Server (Port 5002)..."
 cd backend
-PORT=5001 node server.js &
+PORT=5002 node server.js &
 BACKEND_PID=$!
 
 # Wait a moment for backend to start
@@ -30,7 +30,7 @@ FRONTEND_PID=$!
 echo ""
 echo "✅ CarVault is starting up!"
 echo "   Frontend: http://localhost:3000"
-echo "   Backend:  http://localhost:5001"
+echo "   Backend:  http://localhost:5002"
 echo ""
 echo "Press Ctrl+C to stop both servers"
 
