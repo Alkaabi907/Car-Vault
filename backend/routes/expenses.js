@@ -13,6 +13,7 @@ router.get('/', auth, async (req, res) => {
       .populate('car', 'make model year licensePlate')
       .sort({ date: -1 });
     res.json(expenses);
+    
   } catch (error) {
     console.error('Get expenses error:', error);
     res.status(500).json({ message: 'Server error' });

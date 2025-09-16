@@ -32,8 +32,7 @@ const Dashboard = () => {
       const cars = carsRes.data;
       const maintenance = maintenanceRes.data;
       const expenses = expensesRes.data;
-
-      const totalExpenses = expenses.reduce((sum, expense) => sum + expense.amount, 0);
+      const totalExpenses = maintenance.reduce((sum, maintenance) => sum + maintenance.cost, 0);
       const recentMaintenance = maintenance
         .sort((a, b) => new Date(b.date) - new Date(a.date))
         .slice(0, 5);
