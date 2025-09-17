@@ -2,12 +2,13 @@
   "name": "carvault-mern",
   "version": "1.0.0",
   "description": "Personal Car Collection Manager - MERN Stack Project",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd backend && npm run dev",
     "client": "cd frontend && npm start",
-    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "start": "cd backend && npm run start"
   },
   "keywords": ["mern", "car", "collection", "management", "react", "express", "mongodb"],
   "author": "CarVault Team",
